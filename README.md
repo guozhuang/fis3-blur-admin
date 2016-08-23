@@ -5,7 +5,9 @@
 ├── fis-conf.js              <- fis3 配置文件
 ├── bower.json               <- front-end library dependencies
 ├── package.json             <- mostly task runner dependencies
+├── map.json                 <- 记录静态资源映射表，解决资源模块依赖，按需加载问题
 ├── docs/                    <- 前端数据接口
+├── mock/                   <- 前端模拟数据（需要进入插件解决跨域问题）
 ├── gulp/                    <- build tasks
 ├── src/                     <- main front-end assets 前端项目
 │   ├── 404.html

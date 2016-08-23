@@ -1,3 +1,4 @@
+
 //由于使用了bower，有很多非必须资源。通过set project.files对象指定需要编译的文件夹和引用的资源
 fis.set('project.files', ['page/**', 'map.json', 'modules/**', 'lib', 'mock/**']);
 
