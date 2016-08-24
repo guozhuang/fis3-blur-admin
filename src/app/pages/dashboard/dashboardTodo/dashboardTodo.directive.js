@@ -13,7 +13,7 @@
     return {
       restrict: 'EA',
       controller: 'DashboardTodoCtrl',
-      template: __inline('src/app/pages/dashboard/dashboardTodo/dashboardTodo.html')
+      template: __inline('/src/app/pages/dashboard/dashboardTodo/dashboardTodo.html')
     };
   }
 })();

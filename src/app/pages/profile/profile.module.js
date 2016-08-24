@@ -14,7 +14,7 @@
         .state('profile', {
           url: '/profile',
           title: 'Profile',
-          template: __inline('src/app/pages/profile/profile.html'),
+          template: __inline('/src/app/pages/profile/profile.html'),
           controller: 'ProfilePageCtrl',
         });
   }

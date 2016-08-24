@@ -13,7 +13,7 @@
     var jqWindow = $(window);
     return {
       restrict: 'E',
-      template: __inline('src/app/theme/components/baSidebar/ba-sidebar.html'),
+      template: __inline('/src/app/theme/components/baSidebar/ba-sidebar.html'),
       controller: 'BaSidebarCtrl',
       link: function(scope, el) {
 

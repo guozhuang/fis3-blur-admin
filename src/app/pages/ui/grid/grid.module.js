@@ -13,7 +13,7 @@
     $stateProvider
         .state('ui.grid', {
           url: '/grid',
-          template: __inline('src/app/pages/ui/grid/grid.html'),
+          template: __inline('/src/app/pages/ui/grid/grid.html'),
           title: 'Grid',
           sidebarMeta: {
             order: 400,

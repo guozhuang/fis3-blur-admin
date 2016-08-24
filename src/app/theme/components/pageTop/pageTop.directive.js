@@ -12,7 +12,7 @@
   function pageTop() {
     return {
       restrict: 'E',
-      template: __inline('src/app/theme/components/pageTop/pageTop.html')
+      template: __inline('/src/app/theme/components/pageTop/pageTop.html')
     };
   }
 

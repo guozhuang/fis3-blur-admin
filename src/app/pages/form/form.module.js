@@ -23,7 +23,7 @@
         })
         .state('form.inputs', {
           url: '/inputs',
-          template: __inline('src/app/pages/form/inputs/inputs.html'),
+          template: __inline('/src/app/pages/form/inputs/inputs.html'),
           title: 'Form Inputs',
           sidebarMeta: {
             order: 0,
@@ -31,7 +31,7 @@
         })
         .state('form.layouts', {
           url: '/layouts',
-          template: __inline('src/app/pages/form/layouts/layouts.html'),
+          template: __inline('/src/app/pages/form/layouts/layouts.html'),
           title: 'Form Layouts',
           sidebarMeta: {
             order: 100,
@@ -40,7 +40,7 @@
         .state('form.wizard',
         {
           url: '/wizard',
-          template: __inline('src/app/pages/form/wizard/wizard.html'),
+          template: __inline('/src/app/pages/form/wizard/wizard.html'),
           controller: 'WizardCtrl',
           controllerAs: 'vm',
           title: 'Form Wizard',

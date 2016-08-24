@@ -13,7 +13,7 @@
     $stateProvider
         .state('charts.chartJs', {
           url: '/chartJs',
-          template: __inline('src/app/pages/charts/chartJs/chartJs.html'),
+          template: __inline('/src/app/pages/charts/chartJs/chartJs.html'),
           title: 'Chart.js',
           sidebarMeta: {
             order: 200,

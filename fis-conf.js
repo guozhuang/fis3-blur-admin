@@ -1,5 +1,5 @@
 //由于使用了bower，有很多非必须资源。通过set project.files对象指定需要编译的文件夹和引用的资源
-fis.set('project.files', ['page/**', 'map.json', 'modules/**', 'lib']);
+fis.set('project.files', ['mock/**', 'map.json', 'src/**',]);
 
 fis.set('statics', '/statics'); //static目录
 
@@ -14,13 +14,12 @@ fis.set('statics', '/statics'); //static目录
 
 
 
-
-fis.match("src/*", {
+fis.match("src/**.js", {
         release: '${statics}/$&'
 });
 
 //assets:字体，图片等目录，因为硬编码到js,scss文件中，先单独发布父级目录
-fis.match("src/assets/*", {
+fis.match("src/assets/**", {
         release: '/$&'
 });
 
@@ -44,7 +43,7 @@ fis.match('**/*.less', {
 
 //sass 的编译
 //npm install [-g] fis-parser-sass
-fis.match('**/*.scss', {
+fis.match('src/sass/**.scss', {
     rExt: '.css', // from .scss to .css
     parser: fis.plugin('node-sass', {
         //fis-parser-less option

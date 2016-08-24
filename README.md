@@ -1,3 +1,34 @@
+
+
+
+```
+├── fis-conf.js              <- fis3 配置文件
+├── bower.json               <- front-end library dependencies
+├── package.json             <- mostly task runner dependencies
+├── map.json                 <- 记录静态资源映射表，解决资源模块依赖，按需加载问题
+├── docs/                    <- 前端数据接口
+├── mock/                   <- 前端模拟数据（需要进入插件解决跨域问题）
+├── src/                     <- main front-end assets 前端项目
+│   ├── 404.html
+│   ├── auth.html
+│   ├── index.html          <- main app dashboard page
+│   ├── reg.html
+│   ├── app/                <- angular application files
+│   │   ├── app.js         <- angular application entry point. Used for managing dependencies
+│   │   ├── pages/         <- UI router pages. Pages created for demonstration purposes. Put your application js and html files here
+│   │   ├── theme/         <- theme components. Contains various common widgets, panels which used across application
+│   ├── assets/             <- static files (images, fonts etc.)
+│   ├── sass/               <- sass styles
+│   │   ├── app/           <- application styles. Used mostly for demonstration purposes. Put your app styles here.
+│   │   ├── theme/         <- theme styles. Used to customize bootstrap and other common components used in tempate.
+```
+
+
+
+
+
+
+
 [![Build Status](https://travis-ci.org/akveo/blur-admin.svg?branch=master)](https://travis-ci.org/akveo/blur-admin)
 
 # BlurAdmin Angular admin panel front-end framework
