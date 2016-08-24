@@ -2,6 +2,12 @@
   "name": "blur_admin",
   "version": "1.2.0",
   "devDependencies": {
+    "fis3-hook-module": "*",
+    "fis3-postpackager-loader": "*",
+    "fis-parser-less": "*",
+    "fis-preprocessor-annotate": "*",
+    "fis3-deploy-http-push": "^1.1.1",
+    "fis-parser-node-sass":"*",
     "browser-sync": "~2.9.11",
     "browser-sync-spa": "~1.0.3",
     "chalk": "~1.1.1",

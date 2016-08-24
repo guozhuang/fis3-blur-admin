@@ -13,7 +13,7 @@
     return {
       restrict: 'E',
       controller: 'DashboardPieChartCtrl',
-      templateUrl: 'app/pages/dashboard/dashboardPieChart/dashboardPieChart.html'
+      template: __inline('src/app/pages/dashboard/dashboardPieChart/dashboardPieChart.html')
     };
   }
 })();

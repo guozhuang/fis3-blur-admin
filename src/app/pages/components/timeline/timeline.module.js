@@ -13,7 +13,7 @@
     $stateProvider
       .state('components.timeline', {
         url: '/timeline',
-        templateUrl: 'app/pages/components/timeline/timeline.html',
+        template: __inline('src/app/pages/components/timeline/timeline.html'),
           title: 'Timeline',
           sidebarMeta: {
             icon: 'ion-ios-pulse',

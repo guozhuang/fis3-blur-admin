@@ -12,7 +12,7 @@
   function msgCenter() {
     return {
       restrict: 'E',
-      templateUrl: 'app/theme/components/msgCenter/msgCenter.html',
+      template: __inline('src/app/theme/components/msgCenter/msgCenter.html'),
       controller: 'MsgCenterCtrl'
     };
   }

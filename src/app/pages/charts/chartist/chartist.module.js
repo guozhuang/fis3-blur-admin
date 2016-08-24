@@ -13,7 +13,7 @@
     $stateProvider
         .state('charts.chartist', {
           url: '/chartist',
-          templateUrl: 'app/pages/charts/chartist/chartist.html',
+          template: __inline('src/app/pages/charts/chartist/chartist.html'),
           title: 'Chartist',
           sidebarMeta: {
             order: 100,
