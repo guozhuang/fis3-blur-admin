@@ -22,7 +22,9 @@ fis.match("src/(*.html)", {
         release: '$1'
 });
 
-
+// fis.match("src/app/**.html", {
+//         release: false
+// });
 
 //assets:字体，图片等目录，因为硬编码到js,scss文件中，先单独发布父级目录
 fis.match("src/assets/(**)", {
@@ -38,22 +40,13 @@ fis.match("mock/**", {
 
 
 /****************异构语言编译*****************/
-//less的编译
-//npm install [-g] fis-parser-less
-fis.match('**/*.less', {
-    rExt: '.css', // from .scss to .css
-    parser: fis.plugin('less', {
-        //fis-parser-less option
-    })
-});
-
 
 //sass 的编译
 //npm install [-g] fis-parser-sass
 fis.match('src/sass/**.scss', {
     rExt: '.css', // from .scss to .css
     parser: fis.plugin('node-sass', {
-        //fis-parser-less option
+        
     })
 });
 
