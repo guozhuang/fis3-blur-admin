@@ -1,62 +1,70 @@
 @import 'common';
 
 
+//theme.css ***********************************
+@import 'theme/_blur-admin-theme.scss';
+@import 'theme/_buttons.scss';
+@import 'theme/_icons.scss';
+@import 'theme/_layout.scss';
+@import 'theme/_preloader.scss';
+@import 'theme/_socicon.scss';
+@import 'theme/_table.scss';
+@import 'theme/_tree.scss';
+//├── bootstrap-overrides/
+@import 'theme/bootstrap-overrides/_panel.scss';
+@import 'theme/bootstrap-overrides/_tabs.scss';
+//├── components/
+@import 'theme/components/_accordion.scss';
+@import 'theme/components/_baWizard.scss';
+@import 'theme/components/_backTop.scss';
+@import 'theme/components/_contentTop.scss';
+@import 'theme/components/_msgCenter.scss';
+@import 'theme/components/_pageTop.scss';
+@import 'theme/components/_sidebar.scss';
+@import 'theme/components/_widgets.scss';
+//├── conf/
+@import 'theme/conf/_mixins.scss';
+@import 'theme/conf/_variables.scss';
+// └── conf/colorScheme/
+@import 'theme/conf/colorScheme/_blur.scss';
+@import 'theme/conf/colorScheme/_mint.scss';
+//└── dashboard/
+@import 'theme/dashboard/_amChart.scss';
+@import 'theme/dashboard/_amChartMap.scss';
+@import 'theme/dashboard/_blurFeed.scss';
+@import 'theme/dashboard/_calendar.scss';
+@import 'theme/dashboard/_pieCharts.scss';
+@import 'theme/dashboard/_popularApp.scss';
+@import 'theme/dashboard/_timeline.scss';
+@import 'theme/dashboard/_todo.scss';
+@import 'theme/dashboard/_trafficChart.scss';
+@import 'theme/dashboard/_weather.scss';
 
-// import theme 
-@import 'theme/bootstrap-overrides/_panel';
 
+// app.css ***********************************
+@import 'app/_alerts.scss';
+@import 'app/_buttonsPage.scss';
+@import 'app/_chartsPage.scss';
+@import 'app/_dashboard.scss';
+@import 'app/_email.scss';
+@import 'app/_form.scss';
+@import 'app/_grid.scss';
+@import 'app/_iconsPage.scss';
+@import 'app/_modalNotifications.scss';
+@import 'app/_modals.scss';
+@import 'app/_notifications.scss';
+@import 'app/_profile.scss';
+@import 'app/_slider.scss';
+@import 'app/_table.scss';
+@import 'app/_tabsPage.scss';
+@import 'app/_tplSkinPanel.scss';
+@import 'app/_tree.scss';
+@import 'app/_typography.scss';
+//└── maps
+@import 'app/maps/_google-maps.scss';
+@import 'app/maps/_leaflet.scss';
+@import 'app/maps/_map-bubbles.scss';
+@import 'app/maps/_map-lines.scss';
 
-C:\Users\liguwe\Desktop\vagrant\fis3-blur-admin\src\sass\theme
-├── _blur-admin-theme.scss
-├── bootstrap-overrides
-│   ├── _panel.scss
-│   └── _tabs.scss
-├── _buttons.scss
-├── components
-│   ├── _accordion.scss
-│   ├── _backTop.scss
-│   ├── _baWizard.scss
-│   ├── _contentTop.scss
-│   ├── _msgCenter.scss
-│   ├── _pageTop.scss
-│   ├── _sidebar.scss
-│   └── _widgets.scss
-├── _blur-admin-theme.scss
-├── bootstrap-overrides
-│   ├── _panel.scss
-│   └── _tabs.scss
-├── _buttons.scss
-├── components
-│   ├── _accordion.scss
-│   ├── _backTop.scss
-│   ├── _baWizard.scss
-│   ├── _contentTop.scss
-│   ├── _msgCenter.scss
-│   ├── _pageTop.scss
-│   ├── _sidebar.scss
-│   └── _widgets.scss
-├── conf
-│   ├── colorScheme
-│   │   ├── _blur.scss
-│   │   └── _mint.scss
-│   ├── _mixins.scss
-│   └── _variables.scss
-├── dashboard
-│   ├── _amChartMap.scss
-│   ├── _amChart.scss
-│   ├── _blurFeed.scss
-│   ├── _calendar.scss
-│   ├── _pieCharts.scss
-│   ├── _popularApp.scss
-│   ├── _timeline.scss
-│   ├── _todo.scss
-│   ├── _trafficChart.scss
-│   └── _weather.scss
-├── _icons.scss
-├── _layout.scss
-├── _preloader.scss
-├── _socicon.scss
-├── _table.scss
-└── _tree.scss
 
 

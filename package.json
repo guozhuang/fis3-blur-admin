@@ -2,6 +2,7 @@
   "name": "blur_admin",
   "version": "1.2.0",
   "devDependencies": {
+    "bower":"*",
     "fis3-hook-module": "*",
     "fis3-postpackager-loader": "*",
     "fis-parser-less": "*",
