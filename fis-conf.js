@@ -40,6 +40,11 @@ fis.match("mock/**", {
 
 /****************异构语言编译*****************/
 
+//忽略_*.scss文件
+fis.match('_*.scss*', {
+    release: false
+});
+
 //sass 的编译
 //npm install [-g] fis-parser-sass
 fis.match('src/sass/**.scss', {
