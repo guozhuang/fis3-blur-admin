@@ -40,8 +40,8 @@ fis.match("mock/**", {
 
 /****************异构语言编译*****************/
 
-//忽略_*.scss文件
-fis.match('_*.scss*', {
+//忽略_*.scss文件,不产出~
+fis.match('_*.scss', {
     release: false
 });
 
@@ -51,11 +51,8 @@ fis.match('src/sass/**.scss', {
     rExt: '.css', // from .scss to .css
     parser: fis.plugin('node-sass', {
     }),
-})
+});
 
-
-
-// packTo:"/statics/src/sass/main.css"
 
 
 //打包与css sprite基础配置
@@ -75,11 +72,34 @@ fis.match('::packager', {
 });
 
 
+// todo QA环境打包部署fis配置
+fis.media('qa')
+//注意压缩时.async.js文件是异步加载的，不能直接用annotate解析
+    .match('**.js', {
+        preprocessor: fis.plugin('annotate'),
+        optimizer: fis.plugin('uglify-js')
+    })
+    .match('/**(.async).js', {
+        preprocessor: null,
+        optimizer: null
+    })
+    .match('**.css', {
+        optimizer: fis.plugin('clean-css')
+    })
+    .match("lib/mod.js", {
+        packTo: "/pkg/vendor.js"
+    })
+    //所有页面中引用到的bower js资源
+    .match("bower_components/**/*.js", {
+        packTo: "/pkg/vendor.js"
+    })
+    //所有页面中引用到的bower css资源
+    .match("bower_components/**/*.css", {
+        packTo: "/pkg/vendor.css"
+    });
 
 
-
-/**********************生产环境下CSS、JS压缩合并*****************/
-//使用方法 fis3 release prod
+// todo 生产环境下打包测试fis配置
 fis.media('prod')
     //注意压缩时.async.js文件是异步加载的，不能直接用annotate解析
     .match('**.js', {
