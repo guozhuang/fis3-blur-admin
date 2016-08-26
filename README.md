@@ -1,10 +1,10 @@
 
 #fis3-blur-admin
 
+fis版blur-admin，fork自https://github.com/akveo/blur-admin
 
 ##构建
 ```bash
-
 # 安装fis bower 
 npm install  -g fis3
 npm install  -g bower
