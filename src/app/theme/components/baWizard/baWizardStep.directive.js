@@ -13,8 +13,7 @@
       scope: {
         form: '='
       },
-      // templateUrl:  __inline('app/theme/components/baWizard/baWizardStep.html'),
-      template:  __inline('baWizardStep.html'),
+      templateUrl:  'app/theme/components/baWizard/baWizardStep.html',
       link: function($scope, $element, $attrs, wizard) {
         $scope.selected = true;
 

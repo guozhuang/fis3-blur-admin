@@ -14,7 +14,7 @@
         .state('components.mail', {
           url: '/mail',
           abstract: true,
-          template: __inline('/src/app/pages/components/mail/mail.html'),
+          templateUrl: 'statics/app/pages/components/mail/mail.html',
           controller: "MailTabCtrl",
           controllerAs: "tabCtrl",
           title: 'Mail',
@@ -23,13 +23,13 @@
           },
         }).state('components.mail.label', {
           url: '/:label',
-          template: __inline('/src/app/pages/components/mail/list/mailList.html'),
+          templateUrl: 'statics/app/pages/components/mail/list/mailList.html',
           title: 'Mail',
           controller: "MailListCtrl",
           controllerAs: "listCtrl"
         }).state('components.mail.detail', {
           url: '/:label/:id',
-          template: __inline('/src/app/pages/components/mail/detail/mailDetail.html'),
+          templateUrl: 'statics/app/pages/components/mail/detail/mailDetail.html',
           title: 'Mail',
           controller: "MailDetailCtrl",
           controllerAs: "detailCtrl"

@@ -9,7 +9,7 @@
     return {
       restrict: 'E',
       transclude: true,
-      template: __inline('/src/app/theme/components/baWizard/baWizard.html'),
+      templateUrl: 'app/theme/components/baWizard/baWizard.html',
       controllerAs: '$baWizardController',
       controller: 'baWizardCtrl'
     }

@@ -13,7 +13,7 @@
     $stateProvider
         .state('dashboard', {
           url: '/dashboard',
-          template: __inline('/src/app/pages/dashboard/dashboard.html'),
+          templateUrl: 'statics/app/pages/dashboard/dashboard.html',
           title: 'Dashboard',
           sidebarMeta: {
             icon: 'ion-android-home',

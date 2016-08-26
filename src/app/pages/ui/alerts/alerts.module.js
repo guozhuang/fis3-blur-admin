@@ -13,7 +13,7 @@
     $stateProvider
         .state('ui.alerts', {
           url: '/alerts',
-          template: __inline('/src/app/pages/ui/alerts/alerts.html'),
+          templateUrl: 'statics/app/pages/ui/alerts/alerts.html',
           title: 'Alerts',
           sidebarMeta: {
             order: 500,

@@ -12,7 +12,7 @@
   function contentTop($location, $state) {
     return {
       restrict: 'E',
-      template: __inline('/src/app/theme/components/contentTop/contentTop.html'),
+      templateUrl: 'app/theme/components/contentTop/contentTop.html',
       link: function($scope) {
         $scope.$watch(function () {
           $scope.activePageTitle = $state.current.title;

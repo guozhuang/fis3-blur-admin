@@ -3,28 +3,53 @@ fis.set('project.files', ['mock/**', 'map.json', 'src/**',]);
 
 fis.set('statics', '/statics'); //static目录
 
-//FIS modjs模块化方案，您也可以选择amd/commonjs等
-// fis.hook('module', {
-//     mode: 'mod'
-// });
 
-
-
-/*************************目录规范*****************************/
+/*************************release目录结构****************************/
+//开发环境
+/*
+├── mock/                    <- 前端模拟数据（需要进入插件解决跨域问题）
+├── statics/                 <- 所有静态资源都会放入此目录下
+│   ├── third-part/         <- bower安装的第三方js,css,字体等静态资源
+│   │   ├── base.js        <- 第三方js文件
+│   │   ├── base.css       <- 第三方css文件
+│   ├── app/                <- angular application files
+│   │   ├── app.js         <- 所有的app脚本代码合并至app.js
+│   │   ├── pages/         <- app所有的静态模板,保持与源码的目录结构一致……
+│   │   ├── theme/         <- 所有公用组件等的静态模板，保持与源码的目录结构一致……
+│   ├── assets/             <- static files (images, fonts etc.)
+│   ├── sass/               <- sass styles
+│   │   ├── index.css
+│   │   ├── 404.css
+│   │   ├── reg.css
+│   │   ├── auth.css
+│   ├── map.json            <- 静态资源映射表
+├── 404.html
+├── auth.html
+├── auth.html
+├── index.html
+*/
 
 
 fis.match("**/*", {
     release: '${statics}/$&'
 });
-
-
-fis.match("src/(*.html)", {
-    release: '$1'
+fis.match("src/(**)", {
+    release: '${statics}/$&'
 });
+
+
+fis.match("src/app/(*.html)", {
+    release: '${statics}/$1'
+});
+
+//todo ng-include引入的模板文件，或者templateUrl指定的文,另外上线考虑压缩html代码
 
 // fis.match("src/app/**.html", {
 //         release: false
 // });
+
+
+
 
 //assets:字体，图片等目录，因为硬编码到js,scss文件中，先单独发布父级目录
 fis.match("src/assets/(**)", {
@@ -63,7 +88,6 @@ fis.match('::packager', {
         resourceType: 'mod',
         useInlineMap: true // 资源映射表内嵌
     }),
-
     packager: fis.plugin('map'),
     spriter: fis.plugin('csssprites', {
         layout: 'matrix',
@@ -97,6 +121,7 @@ fis.media('qa')
     .match("bower_components/**/*.css", {
         packTo: "/pkg/vendor.css"
     });
+
 
 
 // todo 生产环境下打包测试fis配置

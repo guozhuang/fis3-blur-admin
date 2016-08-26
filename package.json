@@ -5,7 +5,6 @@
     "bower":"*",
     "fis3-hook-module": "*",
     "fis3-postpackager-loader": "*",
-    "fis-parser-less": "*",
     "fis-preprocessor-annotate": "*",
     "fis3-deploy-http-push": "^1.1.1",
     "fis-parser-node-sass":"*"

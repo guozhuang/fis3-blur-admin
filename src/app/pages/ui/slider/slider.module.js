@@ -13,7 +13,7 @@
     $stateProvider
         .state('ui.slider', {
           url: '/slider',
-          template: __inline('/src/app/pages/ui/slider/slider.html'),
+          templateUrl: 'statics/app/pages/ui/slider/slider.html',
           title: 'Sliders',
           sidebarMeta: {
             order: 1000,

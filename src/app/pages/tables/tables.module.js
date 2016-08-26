@@ -23,14 +23,14 @@
           },
         }).state('tables.basic', {
           url: '/basic',
-          template: __inline('/src/app/pages/tables/basic/tables.html'),
+          templateUrl: 'statics/app/pages/tables/basic/tables.html',
           title: 'Basic Tables',
           sidebarMeta: {
             order: 0,
           },
         }).state('tables.smart', {
           url: '/smart',
-          template: __inline('/src/app/pages/tables/smart/tables.html'),
+          templateUrl: 'statics/app/pages/tables/smart/tables.html',
           title: 'Smart Tables',
           sidebarMeta: {
             order: 100,

@@ -13,7 +13,7 @@
     $stateProvider
         .state('ui.buttons', {
           url: '/buttons',
-          template: __inline('/src/app/pages/ui/buttons/buttons.html'),
+          templateUrl: 'statics/app/pages/ui/buttons/buttons.html',
           controller: 'ButtonPageCtrl',
           title: 'Buttons',
           sidebarMeta: {
