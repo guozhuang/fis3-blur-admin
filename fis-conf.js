@@ -7,17 +7,17 @@ fis.set('statics', '/statics'); //static目录
 /*************************release目录结构****************************/
 //开发环境
 /*
-├── mock/                    <- 前端模拟数据（需要进入插件解决跨域问题）
-├── statics/                 <- 所有静态资源都会放入此目录下
-│   ├── third-part/         <- bower安装的第三方js,css,字体等静态资源
+├── mock/                  <- 前端模拟数据（需要进入插件解决跨域问题）
+├── statics/               <- 所有静态资源都会放入此目录下
+│   ├── third-part/        <- bower安装的第三方js,css,字体等静态资源
 │   │   ├── base.js        <- 第三方js文件
 │   │   ├── base.css       <- 第三方css文件
-│   ├── app/                <- angular application files
+│   ├── app/               <- angular application files
 │   │   ├── app.js         <- 所有的app脚本代码合并至app.js
 │   │   ├── pages/         <- app所有的静态模板,保持与源码的目录结构一致……
 │   │   ├── theme/         <- 所有公用组件等的静态模板，保持与源码的目录结构一致……
-│   ├── assets/             <- static files (images, fonts etc.)
-│   ├── sass/               <- sass styles
+│   ├── assets/            <- static files (images, fonts etc.)
+│   ├── sass/              <- sass styles
 │   │   ├── index.css
 │   │   ├── 404.css
 │   │   ├── reg.css
@@ -38,16 +38,21 @@ fis.match("src/(**)", {
 });
 
 
-fis.match("src/app/(*.html)", {
+fis.match("src/app/(**.html)", {
     release: '${statics}/$1'
 });
+
+
+fis.match("src/(*.html)", {
+  release: '$1'
+});
+
 
 //todo ng-include引入的模板文件，或者templateUrl指定的文,另外上线考虑压缩html代码
 
 // fis.match("src/app/**.html", {
 //         release: false
 // });
-
 
 
 
@@ -65,17 +70,20 @@ fis.match("mock/**", {
 
 /****************异构语言编译*****************/
 
-//忽略_*.scss文件,不产出~
-fis.match('_*.scss', {
-    release: false
-});
+
 
 //sass 的编译
 //npm install [-g] fis-parser-sass
-fis.match('src/sass/**.scss', {
+fis.match('src/sass/(**.scss)', {
     rExt: '.css', // from .scss to .css
     parser: fis.plugin('node-sass', {
     }),
+    release: '${statics}/sass/$1'
+});
+
+//忽略_*.scss文件,不产出~
+fis.match('_*.scss', {
+  release: false
 });
 
 

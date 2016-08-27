@@ -13,7 +13,7 @@
     $stateProvider
         .state('ui.modals', {
           url: '/modals',
-          templateUrl: 'statics/app/pages/ui/modals/modals.html',
+          templateUrl: 'statics/pages/ui/modals/modals.html',
           controller: 'ModalsPageCtrl',
           title: 'Modals',
           sidebarMeta: {

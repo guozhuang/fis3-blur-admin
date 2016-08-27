@@ -13,7 +13,7 @@
     return {
       restrict: 'E',
       controller: 'DashboardLineChartCtrl',
-      templateUrl: 'statics/app/pages/dashboard/dashboardLineChart/dashboardLineChart.html'
+      templateUrl: 'statics/pages/dashboard/dashboardLineChart/dashboardLineChart.html'
     };
   }
 })();

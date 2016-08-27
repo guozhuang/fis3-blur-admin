@@ -13,7 +13,7 @@
     $stateProvider
         .state('charts.amCharts', {
           url: '/amCharts',
-          templateUrl: 'statics/app/pages/charts/amCharts/charts.html',
+          templateUrl: 'statics/pages/charts/amCharts/charts.html',
           title: 'amCharts',
           sidebarMeta: {
             order: 0,

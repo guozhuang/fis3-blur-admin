@@ -590,7 +590,7 @@
           // -----------------------------------
           .state('page', {
               url: '/page',
-              templateUrl: 'app/pages/page.html',
+              templateUrl: 'statics/pages/page.html',
               resolve: helper.resolveFor('modernizr', 'icons'),
               controller: ['$rootScope', function($rootScope) {
                   $rootScope.app.layout.isBoxed = false;
@@ -599,37 +599,37 @@
           .state('page.login', {
               url: '/login',
               title: 'Login',
-              templateUrl: 'app/pages/login.html'
+              templateUrl: 'statics/pages/login.html'
           })
           .state('page.register', {
               url: '/register',
               title: 'Register',
-              templateUrl: 'app/pages/register.html'
+              templateUrl: 'statics/pages/register.html'
           })
           .state('page.recover', {
               url: '/recover',
               title: 'Recover',
-              templateUrl: 'app/pages/recover.html'
+              templateUrl: 'statics/pages/recover.html'
           })
           .state('page.lock', {
               url: '/lock',
               title: 'Lock',
-              templateUrl: 'app/pages/lock.html'
+              templateUrl: 'statics/pages/lock.html'
           })
           .state('page.404', {
               url: '/404',
               title: 'Not Found',
-              templateUrl: 'app/pages/404.html'
+              templateUrl: 'statics/pages/404.html'
           })
           .state('page.500', {
               url: '/500',
               title: 'Server error',
-              templateUrl: 'app/pages/500.html'
+              templateUrl: 'statics/pages/500.html'
           })
           .state('page.maintenance', {
               url: '/maintenance',
               title: 'Maintenance',
-              templateUrl: 'app/pages/maintenance.html'
+              templateUrl: 'statics/pages/maintenance.html'
           })
           //
           // Horizontal layout

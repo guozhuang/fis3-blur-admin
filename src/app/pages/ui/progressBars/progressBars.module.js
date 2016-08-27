@@ -13,7 +13,7 @@
     $stateProvider
         .state('ui.progressBars', {
           url: '/progressBars',
-          templateUrl: 'statics/app/pages/ui/progressBars/progressBars.html',
+          templateUrl: 'statics/pages/ui/progressBars/progressBars.html',
           title: 'Progress Bars',
           sidebarMeta: {
             order: 600,

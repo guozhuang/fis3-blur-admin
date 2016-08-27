@@ -13,7 +13,7 @@
     $stateProvider
         .state('ui.notifications', {
           url: '/notifications',
-          templateUrl: 'statics/app/pages/ui/notifications/notifications.html',
+          templateUrl: 'statics/pages/ui/notifications/notifications.html',
           controller: 'NotificationsPageCtrl',
           title: 'Notifications',
           sidebarMeta: {

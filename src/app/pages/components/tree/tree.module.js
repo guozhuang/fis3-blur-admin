@@ -17,7 +17,7 @@
     $stateProvider
         .state('components.tree', {
           url: '/tree',
-          templateUrl: 'statics/app/pages/components/tree/tree.html',
+          templateUrl: 'statics/pages/components/tree/tree.html',
           title: 'Tree View',
           sidebarMeta: {
             order: 200,
